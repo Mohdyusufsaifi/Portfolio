@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <title>Azeem</title>
+<link rel="stylesheet" href="./style/style.css">
+<ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm" id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false"><a href="Home" class="nav">Home</a></button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link rounded-5" id="profile-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true"><a href="about"class="nav">Profile</a></button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true"><a href="Contact">Contact</a></button>
+  </li>
+</ul>
+</head>
+<body>
+<div class="container">
+<form action="/Contact" method="post" class="contact-form">
+    <div class="mb-3">
+        <label for="Inputname" class="form-label">Name</label>
+        <input type="name" class="form-control" name="name" id="name" aria-describedby="name">
+      </div>
+    <div class="mb-3">
+        <label for="Inputnumber" class="form-label">Phone number</label>
+        <input type="number" class="form-control" name="number" id="number"  aria-describedby="Phone">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your detail with anyone else.</div>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Message</label>
+      <textarea class="form-control" name="message" id="message" rows="3"></textarea>
+    </div></br>
+    <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </form>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+$("#submit").click(function(){
+    let name=$("#name").val();
+    let email=$("#email").val();
+    let number=$("#number").val();
+    let message=$("#message").val();
+    if(name==""||email==""||number==""||message==""){
+      swal({
+        title:"fields empty ",
+        text:"Please check the missing field!!",
+        icon:"warning",
+        button:"OK"
+      })
+    }
+    else{
+      swal({
+        title:"Succesfully submitted",
+        text: "Your message delivered ",
+        icon:"success",
+        button:"OK"
+      });
+    }
+    })
+    // window.location.reload();
+</script>
+</body>
+</html>

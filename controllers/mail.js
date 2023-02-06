@@ -7,7 +7,7 @@ exports.sendEmail=(req, res) => {
         service: "gmail",
         auth: {
             user:'azeemsaifi38180@gmail.com',
-            pass: 'hodjnluokqzkosvo'
+            pass: 'sstsshaqyxudtxbg'
         },
     });
 
@@ -18,6 +18,10 @@ exports.sendEmail=(req, res) => {
         html: "<p>Name: "+req.body.name+"</p> Email: "+req.body.email+"<p> Phone Number: "+req.body.number+
         "<p> Message: "+req.body.message
     };
+    if(req.body.name==""){
+        res.send(`<script>alert("fill all field")</script>`)
+    }
+    else{
     transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
             console.log(error);
@@ -25,4 +29,4 @@ exports.sendEmail=(req, res) => {
             res.status(200).send(`<script>window.location.assign("http://localhost:3000/Contact")</script>`)
         }
     })
-};
+}};

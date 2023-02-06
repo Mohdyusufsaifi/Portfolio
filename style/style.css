@@ -1,5 +1,5 @@
 *{
-    padding: 2.5px;
+    padding: 0.5px;
     margin: 0px;
 }
 
@@ -72,11 +72,8 @@ body {
 
 .Mannge{
     height: 40%;
-    width:  60%;
+    width:  58%;
     border-radius: 25px;
-}
-.tex{
-    text-overflow: clip;
 }
 .schema-2{
     height: 30%;
